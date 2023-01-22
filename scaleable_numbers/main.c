@@ -11,17 +11,17 @@ void make_zero (int scale) {
     }
 
     for (int i = 0; i < size; ++i) {            //den rand befüllen mit '*'
-        zero[0][i] = '*';
-        zero[size-1][i] = '*';
-        zero[i][0] = '*';
-        zero[i][size-1] = '*';
-        zero[i][size-1-i] = '*';
+        zero[0][i] = '*';                       //Rand oben befüllen mit '*'
+        zero[size-1][i] = '*';                  //Rand unten
+        zero[i][0] = '*';                       //Rand links
+        zero[i][size-1] = '*';                  //Rand rechts
+        zero[i][size-1-i] = '*';                //diagonale
     }
 
-    zero[0][0] = ' ';
-    zero[0][size-1] = ' ';
-    zero[size-1][0] = ' ';
-    zero[size-1][size-1] = ' ';
+    zero[0][0] = ' ';                           //Ecke links oben befüllen mit ' '
+    zero[0][size-1] = ' ';                      //Ecke rechts oben
+    zero[size-1][0] = ' ';                      //links unten
+    zero[size-1][size-1] = ' ';                 //rechts unten
 
     //print_zero(zero, size);
     for (int i = 0; i < size; ++i) {
